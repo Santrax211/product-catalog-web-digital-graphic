@@ -5,6 +5,8 @@ import Link from "next/link"
 import { ProductsTable } from "@/components/admin/products-table"
 import type { Product, Category } from "@/lib/types"
 
+export const runtime = 'edge'
+
 export default async function AdminDashboard() {
   const supabase = await createClient()
   if (!supabase) throw new Error("Supabase client not initialized")

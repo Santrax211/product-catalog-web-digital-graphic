@@ -8,6 +8,8 @@ import type { Product, Category } from "@/lib/types"
 // Change this to your actual WhatsApp number (with country code, no + or spaces)
 const WHATSAPP_NUMBER = "51930545985"
 
+export const runtime = 'edge'
+
 export default async function HomePage() {
   const supabase = await createClient()
   if (!supabase) throw new Error("Supabase client not initialized")

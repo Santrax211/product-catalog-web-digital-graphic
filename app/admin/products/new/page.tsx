@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import type { Category } from "@/lib/types"
 
+export const runtime = 'edge'
+
 export default async function NewProductPage() {
   const supabase = await createClient()
   const { data: categories } = await supabase.from("categories").select("*").order("nombre")

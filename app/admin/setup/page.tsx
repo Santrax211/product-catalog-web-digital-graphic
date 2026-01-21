@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { redirect } from "next/navigation"
 
+export const runtime = 'edge'
+
 export default async function AdminSetupPage() {
   const supabase = await createClient()
   if (!supabase) throw new Error("Supabase client not initialized")

@@ -5,6 +5,8 @@ import Link from "next/link"
 import type { Product, Category } from "@/lib/types"
 import { notFound } from "next/navigation"
 
+export const runtime = 'edge'
+
 export default async function EditProductPage({ params }: { params: Promise<{ id: string }> }) {
   const supabase = await createClient()
   const { id } = await params
